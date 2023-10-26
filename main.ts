@@ -7,13 +7,14 @@ namespace PlatformFunctions {
     //% weight=100
     export function createPlatformerSprite(img: Image, kind: number): Sprite {
         const sprite = sprites.create(img, kind);
+        controller.moveSprite(sprite, 100, 0)
         sprite.ay = 500;
         return sprite;
     }
 
     // Function to make the platformer sprite jump when the "up" button is pressed
     //% block="Make platformer %sprite=variables_get(mySprite) jump when 'A' button is pressed"
-    //% weight=101
+    //% weight=100
     export function makeSpriteJump(sprite: Sprite) {
         let buttonPressTime: any;
         let buttonPressTime2: any;
